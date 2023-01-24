@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Flex resumo</title>
+
+</head>
+
+<body>
+<nav class="row">
+    <nav class="menu">
+        <ul><b>Container</b>
+            <li><a href="#first">Main axis</a></li>
+            <li><a href="#justify_content">Justify-content</a></li>
+            <li><a href="#align-itens">Align-itens</a></li>
+            <li><a href="#flex-wrap">Flex-Wrap</a></li>
+            <li><a href="#gaps">Gaps</a></li>
+        </ul>
+        <ul><b>Itens</b>
+            <li><a href="#flex-srink">Flex-srink</a></li>
+            <li><a href="#atalho-flex">Atalho-flex</a></li>
+            <li><a href="#align-self">Align-itens</a></li>
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </nav>
+
+    
+        <nav class="menu-mobile">
+            <h2><i class="fa fa-bars"></i></h2>
+            <ul>
+                <li><a href="#flex-srink">Flex-srink</a></li>
+                <li><a href="#atalho-flex">Atalho-flex</a></li>
+                <li><a href="#align-self">Align-itens</a></li>
+                <li><a href="#order">Order</a></li>
+
+            </ul>
+        </nav>
+    
+
+    <main>
+        
+        <h1 id="first">Main Axis no flex-box</h1>
+
+            <p> Por padrão, o <b>Main-Axis</b> é o eixo horizontal.</p>
+
+            <img class="imgExemplo" src="imagens/eixo-x.PNG" width="400"/>
+
+            <p>Mas ele pode ser alterado para ser o eixo vertical com a propriedade <code>flex-direction: column;</code></p>
+            <img class="imgExemplo" src="imagens/eixo-y.PNG" width="400"/>
+
+
+        <h1 id="justify_content">Justify Content</h1>
+            <p>Alinha os itens no <i><b>Main Axis</b></i></p> 
+            <ul>
+                <li><b><code>justify-content: end;</code></b> alinha itens no fim do elemento pai.</li>
+                <img class="imgExemplo" src="imagens/end1.PNG" width="400"/>
+
+                <p></p>
+                <li><b><code>justify-content: center;</code></b> alinha itens no centro do elemento pai.</li>
+
+                <img class="imgExemplo" src="imagens/center1.PNG" class="imgExemplo" width="400"/>
+
+                <p></p>
+                <li><b><code>justify-content: space-between;</code></b> aloca o espaço entre o itens.</li>
+
+                <img class="imgExemplo" src="imagens/between.PNG" class="imgExemplo"  width="400"/>
+
+                <p></p>
+                <li><b><code>justify-content: space-around;</code></b> aloca espaço entre itens e a borda.</li>
+
+                <img class="imgExemplo"src="imagens/around.PNG" class="imgExemplo"  width="400"/>
+
+                <p></p>
+                <li><b><code>justify-content: space-evenly;</code></b> aloca espaço igualmente entre tudo.</li>
+
+                <img class="imgExemplo" src="imagens/evenly.PNG" class="imgExemplo"  width="400"/>
+
+            </ul>
+
+        <h1 id="align-itens">Align-itens</h1>
+            Alinha os itens no cross-axis:
+            <ul>
+                <li><b><code>aling-itens: align-itens: start;</code></b> alinha no início do cross axis.</li>
+                <img  class="imgExemplo"src="imagens/start.PNG" class="imgExemplo"  width="400"/>
+                <p></p>
+
+                <li><b><code>aling-itens: end;</code>: </b> alinha no final do cross axis.</li>
+                <img class="imgExemplo" src="imagens/end2.PNG" class="imgExemplo"  width="400"/>
+                <p></p>
+
+                <li><b><code>aling-itens: align-itens: baseline;</code></b> alinha de acordo com o texto dos itens.</li>
+                <img class="imgExemplo" src="imagens/baseline.PNG" class="imgExemplo"  width="400"/>
+                <p></p>
+
+                <li><b><code>aling-itens: align-itens: center;</code></b> alinha no centro do cross-axis.</li>
+                <img class="imgExemplo" src="imagens/center2.PNG" class="imgExemplo" width="400"/
+                ><p></p>
+
+            </ul>
+
+        <h1 id="flex-wrap">Flex-Wrap</h1>
+
+            <p>Por padrão os itens no flex-box tentam ficar sempre na mesma linha, esmagando uns aos outros se não houver mais espaço para todos. </p>
+
+            <img class="imgExemplo" src="imagens/nowrap.PNG" width="400"/>
+
+            <p><code>Flex-Wrap;</code> faz com que eles possam quebrar para linha debaixo quando não houver mais espaço.</p>
+
+            <img class="imgExemplo" src="imagens/wrap.PNG" width="400"/>
+
+            <h2>Aling-Content</h2>
+            <p>Quando temos um <code>flex-wrap;</code> a opção <code>aling-content;</code> é liberada.</p>
+
+            <p>Ou seja, a propriedade <code>aling-content;</code> só funciona quando os itens estão em <code>flex-wrap: wrap;</code>.</p>
+
+            <code>align-content;</code> alinha todos os itens pelo cross-axis.
+
+            <ul>
+                <li><code>aling-content: end;</code></li>
+                <img  class="imgExemplo"src="imagens/end3.PNG" width="400"/>
+
+                <li><code>aling-content: center;</code></li>
+                <img class="imgExemplo" src="imagens/center3.PNG" width="400"/>
+
+                <li><code>aling-content: space-between;</code></li>
+                <img  class="imgExemplo"src="imagens/between2.PNG" width="400"/>
+
+                <li><code>aling-content: space-around;</code></li>
+                <img class="imgExemplo" src="imagens/around2.PNG" width="400"/>
+
+                <li><code>aling-content: space-envenly;</code></li>
+                <img class="imgExemplo" src="imagens/evenly2.PNG" width="400"/>
+
+                <li><code>aling-content: start;</code></li>
+                <img class="imgExemplo" src="imagens/start2.PNG" width="400"/>
+
+            </ul>
+            
+        <h1 id="gaps">Gaps</h1>
+            <p>Adicionar espaço entre os elementos. <code>gap: 1em;</code></p>  
+
+            <img class="imgExemplo" src="imagens/gap.PNG" width="400"/>
+
+            <h1>Flex-grow</h1>
+            <p>Propriedade aplicada diretamente no item (filho).</p>
+            <p>Permite ao item aumentar de tamanho caso haja espaço suficiente para ele.</p>
+
+            <p>Seu valor vai até 1:</p>
+
+            <img class="imgExemplo" src="imagens/flex-grow.PNG" width="400"/>
+            <img class="imgExemplo" src="imagens/flex-grow2.PNG" width="400"/>
+            <p>Caso todos tenham <code>flex-grow:1;</code> todo espaço disponível será distribuído igualmente entre os itens.</p>
+
+            <img class="imgExemplo" src="imagens/flex-grow3.PNG" width="400"/>
+
+        <h1 id="flex-srink">Flex-srink</h1>
+
+            <p>Também tem valor até 1.</p>
+
+            <p>Define o quanto um item encolhe em relação aos outros.</p>
+
+            <p><code>flex-srink: 5;</code> item encolhe bem mais rápido que os outros.</p>
+
+            <code>flex-srink:0;</code> item não encolhe, mesmo se alterarmos o tamanho da janela.
+
+            <h1>Flex-basis</h1>
+            <p>Define o tamanho de um item antes que o espaço restante seja distribuído.</p>
+
+            <p><code>flex-basis:0;</code> encolhe elemento ao máximo.</p>
+
+            <p><code>flex-basis:150px;</code> permite que o item tenha 150px.</p>
+
+        <h2 id="atalho-flex">Atalho <code>flex;</code></h2>
+        At  rimeiro parâmetro é definido, os outros dois são autimaticamente setados.
+
+        <h1 id="align-self">Align-self</h1>
+            Outra propriedade de itens (filho). Vai sobrepor o valor colocado no <code>align-itens;</code> setado no container, mas para um item em particular. 
+
+            <p>Por exemplo, se no caintaner pai tivéssemos o <code>align-itens: start;</code> e no item1 a propriedade <code>align-self: center;</code></p>
+
+            <img class="imgExemplo" src="imagens/align-self.PNG" width="400"/>
+
+        <h1 id="order">Order</h1>
+            <p>Alterar a ordem em que os itens aparecem. Por padrão essa ordem segue como definido no html, mas ela pode ser alterada.</p>
+
+            <p>O valor dessa propriedade começa em zero.</p>
+
+            <p><code>order: -1;</code></p>
+
+            <img class="imgExemplo" src="imagens/order.png" width="400"/>
+    </main>
+</nav>
+
+
+    <script src="https://kit.fontawesome.com/e7bc86cff2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        $('nav.menu-mobile h2').click(function(){
+            $('nav.menu-mobile ul').slideToggle();
+        });
+    </script>
+</body>
+</html>
